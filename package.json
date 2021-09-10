@@ -9,8 +9,7 @@
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=b79bc6e0ac80"
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@auth0/auth0-spa-js": "^1.17.0",
