@@ -3,6 +3,7 @@
 // @import "../node_modules/bootstrap-vue/dist/bootstrap-vue.css";
 
 .pagination {
+  flex-wrap: wrap;
   li {
     & + li {
       margin-left: 10px;

@@ -197,14 +197,18 @@ export default {
           this.userData = data;
         });
     },
+    // Pesquisa para api vinda do input de texto
     async searchGit(event) {
       let header = {};
       let authToken = "";
       const isAuthLogged = await this.$auth.isAuthenticated;
+
+      // verificação se usuário está logado
       if (isAuthLogged) {
         authToken = await this.$auth.getTokenSilently();
       }
 
+      // adiciona token ao header da busca
       if (authToken) {
         header = {
           headers: {
@@ -214,6 +218,8 @@ export default {
       }
 
       const inputData = event.target.value;
+
+      //Verifica número de caracteres inseridos
       if (inputData.length >= 3) {
         this.isFetchUserLoading = true;
         if (this.timer) {
@@ -374,6 +380,7 @@ export default {
     }
   }
   .pagination {
+    flex-wrap: wrap;
     li {
       & + li {
         margin-left: 10px;
